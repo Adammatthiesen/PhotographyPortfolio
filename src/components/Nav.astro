@@ -3,7 +3,7 @@ import Icon from './Icon.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import type { iconPaths } from './IconPaths';
 import { Image } from 'astro:assets';
-import logo from '../assets/logo.png';
+import logo from '@assets/logo.webp';
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
@@ -26,7 +26,7 @@ const textLinks: { label: string; href: string }[] = [
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<Image src={logo} alt="logo" />
+			<Image src={logo} alt="logo" width={350} />
 		</a>
 		<menu-button>
 			<template>
@@ -110,9 +110,9 @@ const textLinks: { label: string; href: string }[] = [
 				}
 			</div-->
 
-			<div class="theme-toggle">
+			<!--div class="theme-toggle">
 				<ThemeToggle />
-			</div>
+			</div-->
 		</div>
 	</div>
 </nav>
