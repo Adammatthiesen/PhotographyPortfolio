@@ -11,6 +11,8 @@ const {
 	title = 'Matthiesen Photography',
 	description = 'Adam Matthiesen & Alox Leyva, two hobbiest photographers.',
 } = Astro.props;
+
+import { AstroFont } from "astro-font";
 ---
 
 <meta charset="UTF-8" />
@@ -19,12 +21,26 @@ const {
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>
 
-<!--link rel="icon" type="image/svg" href="/favicon.svg" /-->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-	href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@500;600&display=swap"
-	rel="stylesheet"
+<AstroFont
+	config={[
+		{
+			src: [],
+			preload: true,
+			display: "swap",
+			name: "Public Sans",
+			fallback: "sans-serif",
+			cssVariable: "font-body",
+			googleFontsURL: 'https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&display=swap',
+		},
+		{
+			src: [],
+			name: "Rubik",
+			preload: false,
+			display: "swap",
+			fallback: "sans-serif",
+			cssVariable: "font-brand",
+			googleFontsURL: 'https://fonts.googleapis.com/css2?family=Rubik:wght@500;600&display=swap',
+		},
+	]}
 />
 <ViewTransitions />
-
